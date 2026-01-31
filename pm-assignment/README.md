@@ -2,7 +2,9 @@
 
 A modern, AI-powered product feedback dashboard built with **Cloudflare Workers**. Automatically analyzes customer feedback for sentiment, urgency, and themes using Workers AI.
 
-![Dashboard Preview](public/logo.png)
+https://github.com/user-attachments/assets/d35e1988-49c8-410d-9d6e-dd9347c10acc
+
+
 
 ## ✨ Features
 
@@ -29,23 +31,25 @@ A modern, AI-powered product feedback dashboard built with **Cloudflare Workers*
 - [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/)
 - Cloudflare account
 
+	```basb
    git clone https://github.com/BarrileteChapin/pm-feedback-dashboard.git
    cd pm-feedback-dashboard
    ```
 
 2. Install dependencies:
    
+	```bash
    npm install
    ```
 
-3. Create a D1 database:
+4. Create a D1 database:
    ```bash
    npx wrangler d1 create feedback-db
    ```
 
-4. Update `wrangler.jsonc` with your database ID
+5. Update `wrangler.jsonc` with your database ID
 
-5. Run locally:
+6. Run locally:
    ```bash
    npm run dev
    ```
@@ -108,6 +112,8 @@ For demo purposes:
 
 MIT License - feel free to use for your own projects!
 
+
+![Dashboard Preview](public/logo.png)
 ---
 
 Built with ☁️ Cloudflare Workers
