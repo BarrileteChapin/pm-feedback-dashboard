@@ -1,0 +1,41 @@
+/**
+ * Wrangler Configuration for Product Feedback Dashboard
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "pm-feedback-dashboard",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-01-28",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"observability": {
+		"enabled": true
+	},
+	// D1 Database for storing feedback
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "feedback-db",
+			"database_id": "189075c9-16cb-4eb8-a015-84082adc5984"
+		}
+	],
+	// Workers AI for sentiment/urgency analysis
+	"ai": {
+		"binding": "AI"
+	},
+	// Workflows for processing pipeline
+	"workflows": [
+		{
+			"name": "feedback-processor",
+			"binding": "FEEDBACK_WORKFLOW",
+			"class_name": "FeedbackProcessorWorkflow"
+		}
+	],
+	// Static Assets for frontend dashboard
+	"assets": {
+		"directory": "./public/",
+		"binding": "ASSETS"
+	}
+}

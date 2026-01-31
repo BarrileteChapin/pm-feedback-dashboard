@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Wrangler
+.wrangler/
+.dev.vars
+
+# Build output
+dist/
+
+# Local D1 database
+.mf/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment variables (keep .dev.vars.example)
+.env
+.env.local
+.env.*.local
+
+prompt_guide.md
